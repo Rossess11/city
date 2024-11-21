@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./public/main.css">
+        <script type="importmap">
+            {
+              "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three/examples/jsm/"
+              }
+            }
+          </script>
+        <title>Ciudad</title>
+    </head>
+    <body>
+        <div id="root-window">
+            <div id="render-target"></div>
+        </div>
+
+        <script type="module">
+            import { createGame } from './scene/game.js';
+
+            window.onload = () => {
+                window.game = createGame();
+            }
+        </script>
+    </body>
+</html>
